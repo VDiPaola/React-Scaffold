@@ -1,9 +1,9 @@
 {
-  "name": "project-name",
-  "version": "0.1.0",
+  "name": "portfolio-website",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@projectstorm/react-diagrams": "^7.0.2",
+    "@chakra-ui/react": "^2.8.2",
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -12,8 +12,6 @@
     "@types/node": "^20.4.9",
     "@types/react": "^18.2.19",
     "@types/react-dom": "^18.2.7",
-    "flowbite": "^1.8.1",
-    "flowbite-react": "^0.5.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.3.1",
