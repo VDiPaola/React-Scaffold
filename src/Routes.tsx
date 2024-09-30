@@ -11,7 +11,15 @@ import { useAppSelector, useAppDispatch } from './State/Hooks';
 import { NetworkManager } from './Helpers/NetworkManager';
 import { auth,unauth } from './State/Slices/AuthSlice';
 import { login,logout } from './State/Slices/UserSlice';
-import HomePage from './Pages/Home';
+import HomePage from './Pages/Landing/HomePage';
+import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react';
+
+const chakraConfig = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
+};
+
+const theme = extendTheme({ chakraConfig });
 
 const Router = () => {
   const authState = useAppSelector(state => state.auth)
@@ -23,6 +31,8 @@ const Router = () => {
   }
 
   return(
+    <ChakraProvider theme={theme}>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
     <BrowserRouter>
         <Routes>
           {(authState.isAuthenticated && (
@@ -37,6 +47,7 @@ const Router = () => {
           
         </Routes>
     </BrowserRouter>
+    </ChakraProvider>
   )
 }
 
